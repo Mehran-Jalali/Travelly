@@ -1,0 +1,329 @@
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 2.6rem;
+}
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+}
+button:hover {
+  background: #23354b;
+}
+/* Nav Section Wiht Hero */
+.main-head {
+  background: #131c27;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+nav {
+  min-height: 10vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+nav ul a {
+  margin: 1rem 1rem;
+}
+
+/* nav ul a:hover {
+  background: #343c44;
+  padding: 0.75rem 0.5rem;
+  border-radius: 1rem;
+} */
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 200;
+}
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url(/img/landing-page.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h3 {
+  padding: 5rem;
+}
+/* Locations Section */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/new-york-page.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+.locations-head h3 {
+  padding: 4rem 0rem;
+  font-size: 2rem;
+  text-shadow: 1px 2px 4px #663b34;
+  background: rgba(19, 28, 39, 0.8);
+  -webkit-text-fill-color: white;
+  text-align: center;
+}
+.cloud {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90rem;
+  pointer-events: none;
+}
+.bird {
+  position: absolute;
+  width: 30rem;
+  top: 5%;
+  left: 2%;
+  pointer-events: none;
+}
+.moving-bird-1 {
+  animation: birdAnimation 11s infinite ease-in-out;
+}
+.moving-cloud-1 {
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 10%;
+  z-index: -2;
+  opacity: 0.5;
+  animation: cloudAnimation 4s infinite alternate ease-in-out;
+}
+@keyframes birdAnimation {
+  from {
+    transform: translate(-110%, 200%);
+  }
+  to {
+    transform: translate(450%, 400%);
+  }
+}
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+/* Benefits Section */
+.benefits-head {
+  background: #343c44;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.5rem;
+  text-align: center;
+}
+.benefits-head h3 {
+  padding: 1rem;
+}
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+.card h4 {
+  padding: 1rem;
+}
+.card p {
+  padding: 2rem;
+}
+.card-icon {
+  background: #4c6e97;
+}
+button:focus {
+  background: #2c3f57;
+  outline-style: solid;
+}
+/* Contact Section */
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/boris-baldinger-eUFfY6cwjSU-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  padding: 3rem;
+  width: 60%;
+  border-radius: 2rem;
+  color: white;
+}
+.form-head {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.name-form {
+  display: flex;
+  justify-content: center;
+}
+.email-form {
+  display: flex;
+  justify-content: center;
+}
+.form-wrapper label,
+.form-wrapper input {
+  margin: 2rem 3rem;
+}
+.form-wrapper button {
+  width: 100%;
+  margin-top: 7rem;
+  padding: 1rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+/* Footer */
+footer {
+  background: rgba(19, 28, 39, 1);
+}
+.footer-wrapper {
+  background: rgba(19, 28, 39, 1);
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+.footer-wrapper ul {
+  list-style: none;
+  display: flex;
+
+  justify-content: end;
+  flex: 1 1 40rem;
+}
+
+.footer-wrapper img {
+  margin: 3rem 3rem;
+}
+.footer-wrapper h5 {
+  flex: 1 1 40rem;
+  margin-top: 2.9rem;
+}
+
+/* Media query */
+@media screen and (max-width: 952px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+  }
+  .cloud {
+    pointer-events: none;
+  }
+  .moving-cloud-1 {
+    z-index: -1;
+  }
+  .moving-cloud-2 {
+    z-index: -2;
+  }
+  .locations-head h3 {
+    text-shadow: 1px 2px 4px #663b34;
+    background: rgba(19, 28, 39, 0.8);
+    -webkit-text-fill-color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    z-index: +2;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+  }
+}
